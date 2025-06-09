@@ -17,7 +17,7 @@ spec:
         image: krakend
         ports:
         - containerPort: 8080
-        imagePullPolicy: Never
+        imagePullPolicy: Always 
         command: [ "/usr/bin/krakend" ]
         args: [ "run", "-d", "-c", "/etc/krakend/krakend.json", "-p", "8080" ]
         volumeMounts:
