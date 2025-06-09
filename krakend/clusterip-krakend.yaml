@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: krakend-service
+  labels:
+    app: krakend
+spec:
+  selector:
+    app: krakend
+  ports:
+    - protocol: TCP
+      port: 80         # This is the port exposed within the cluster
+      targetPort: 8080  # This is the port your KrakenD container is listening on
+  type: ClusterIP
+
