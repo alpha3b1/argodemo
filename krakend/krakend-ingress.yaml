@@ -13,7 +13,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: krakend
+                name: krakend-clusterip
                 port:
                   number: 80
 
